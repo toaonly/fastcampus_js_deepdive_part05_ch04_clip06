@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 p-0;
+  @apply text-base;
+  @apply bg-slate-900;
+  @apply text-white;
+}
+
+#app {
+  @apply flex justify-center;
+}
+
+button,
+.btn {
+  @apply block text-center px-4 py-2 rounded-sm;
+  @apply bg-pink-500 hover:bg-pink-600 active:bg-pink-400;
+  @apply text-sm font-semibold;
+}
+
+input,
+select {
+  @apply p-2;
+  @apply w-full;
+  @apply bg-transparent;
+  @apply border border-slate-500 focus:border-pink-500 outline-none;
+  @apply rounded-md;
+
+  &:read-only {
+    @apply bg-slate-950 text-slate-200 focus:border-slate-500;
+  }
+}
+
+label {
+  @apply text-xs text-slate-500 capitalize;
+}

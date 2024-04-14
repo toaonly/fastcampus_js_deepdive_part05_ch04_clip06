@@ -1,0 +1,82 @@
+{
+  "product-categories": [
+    {
+      "id": "1e8f23e4-3bf0-4c49-b4c8-f5d48b738f97",
+      "name": "운동화"
+    },
+    {
+      "id": "4e5a5dab-8358-4af9-b5c3-cd3e9938d123",
+      "name": "스니커즈"
+    },
+    {
+      "id": "7b1e7be8-6b9e-4d4f-b8ba-e18f7330e303",
+      "name": "캔버스"
+    }
+  ],
+  "products": [
+    {
+      "id": "ab1119b5-123e-42aa-aab3-bc6a5a20771f",
+      "name": "에어맥스 운동화",
+      "description": "최고의 쿠셔닝을 제공하는 운동화",
+      "size": 250,
+      "color": "흰색",
+      "category": "1e8f23e4-3bf0-4c49-b4c8-f5d48b738f97"
+    },
+    {
+      "id": "fd7a8c90-123d-4567-a5d2-bc3df7e2a456",
+      "name": "컨버스 올스타",
+      "description": "클래식한 스타일의 캔버스 신발",
+      "size": 260,
+      "color": "검정",
+      "category": "7b1e7be8-6b9e-4d4f-b8ba-e18f7330e303"
+    },
+    {
+      "id": "de2c2330-4c1d-4b49-8f45-9f98b213c2e1",
+      "name": "스탠스미스 스니커즈",
+      "description": "다용도로 쓰기 좋은 스타일리쉬 스니커즈",
+      "size": 280,
+      "color": "흰색",
+      "category": "4e5a5dab-8358-4af9-b5c3-cd3e9938d123"
+    },
+    {
+      "id": "96de857a-5d9d-4dae-a121-112f411a3c9f",
+      "name": "울트라부스트",
+      "description": "러닝 최적화된 고성능 운동화",
+      "size": 270,
+      "color": "초록",
+      "category": "1e8f23e4-3bf0-4c49-b4c8-f5d48b738f97"
+    },
+    {
+      "id": "c2b10e8d-8e94-49b6-9fcb-8ab67d7f567e",
+      "name": "990v5",
+      "description": "편안함과 스타일을 겸비한 스니커즈",
+      "size": 240,
+      "color": "보라",
+      "category": "4e5a5dab-8358-4af9-b5c3-cd3e9938d123"
+    },
+    {
+      "id": "b319a0f3-7fed-4411-9dba-222e8b8dca15",
+      "name": "재즈 오리지널",
+      "description": "클래식한 디자인의 쿠셔닝 캔버스",
+      "size": 290,
+      "color": "핑크",
+      "category": "7b1e7be8-6b9e-4d4f-b8ba-e18f7330e303"
+    },
+    {
+      "id": "4f1ea9d1-3bee-4bf1-91f6-3dbe5a5329a1",
+      "name": "덩크",
+      "description": "스트릿 패션을 완성하는 스니커즈",
+      "size": 275,
+      "color": "검정",
+      "category": "4e5a5dab-8358-4af9-b5c3-cd3e9938d123"
+    },
+    {
+      "id": "ee40f3e8-d99a-4ad2-9a2e-da8e2caf3c00",
+      "name": "니짜",
+      "description": "편안한 착용감의 클래식 캔버스 신발",
+      "size": 230,
+      "color": "흰색",
+      "category": "7b1e7be8-6b9e-4d4f-b8ba-e18f7330e303"
+    }
+  ]
+}
