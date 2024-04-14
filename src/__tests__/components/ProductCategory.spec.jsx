@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
-import ProductCategory from '../components/ProductCategory'
-import db from '../../db/db.json'
+import ProductCategory from '../../components/ProductCategory'
+import db from '../../../db/db.json'
 import { useState } from 'react'
 
 describe('components/ProductCategory 컴포넌트 테스트', () => {
