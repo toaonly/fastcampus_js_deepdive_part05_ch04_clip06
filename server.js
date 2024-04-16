@@ -40,6 +40,24 @@ server.get('/product-categories/:uuid', (req, res) => {
   res.status(resData.status).json(resData.data)
 })
 
+server.patch('/product-categories/:uuid', (req, res) => {
+  const { uuid } = req.params
+  const { name } = req.body
+  const productCategories = router.db.get('product-categories')
+  const findedCate = productCategories.find({ id: uuid })
+  let resData = { status: 201, data: null }
+
+  if (!findedCate.value()) {
+    resData = { status: 404, data: null }
+  } else {
+    const result = findedCate.assign({ name }).write()
+
+    resData = { status: 200, data: result }
+  }
+
+  res.status(resData.status).json(resData.data)
+})
+
 server.delete('/product-categories/:uuid', (req, res) => {
   const { uuid } = req.params
   const productCategories = router.db.get('product-categories')
@@ -93,6 +111,33 @@ server.get('/products/:uuid', (req, res) => {
     const categoryName = productCategories.find(pc => pc.id === findedProduct.category)?.name
 
     resData = { status: 200, data: { ...findedProduct, categoryName } }
+  }
+
+  res.status(resData.status).json(resData.data)
+})
+
+server.patch('/products/:uuid', (req, res) => {
+  const { uuid } = req.params
+  const { name, description, size, color, category } = req.body
+  const products = router.db.get('products')
+  const findedProd = products.find({ id: uuid })
+  let resData = { status: 201, data: null }
+
+  if (!findedProd.value()) {
+    resData = { status: 404, data: null }
+  } else {
+    const prod = findedProd.value()
+    const result = findedProd
+      .assign({
+        name: name ?? prod.name,
+        description: description ?? prod.description,
+        size: size ?? prod.size,
+        color: color ?? prod.color,
+        category: category ?? prod.category,
+      })
+      .write()
+
+    resData = { status: 200, data: result }
   }
 
   res.status(resData.status).json(resData.data)

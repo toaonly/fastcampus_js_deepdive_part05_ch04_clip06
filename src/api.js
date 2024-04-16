@@ -15,6 +15,13 @@ const api = {
       body: JSON.stringify({ name }),
     }).then(res => res.json())
   },
+  updateProductCategory({ uuid, name }) {
+    return fetch(`http://localhost:3000/product-categories/${uuid}`, {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name }),
+    }).then(res => res.json())
+  },
 
   getProducts() {
     return fetch(`http://localhost:3000/products`).then(res => res.json())
@@ -28,6 +35,13 @@ const api = {
   createProduct({ name, description, size, color, category }) {
     return fetch(`http://localhost:3000/products`, {
       method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name, description, size, color, category }),
+    }).then(res => res.json())
+  },
+  updateProduct({ uuid, name, description, size, color, category }) {
+    return fetch(`http://localhost:3000/products/${uuid}`, {
+      method: 'PATCH',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ name, description, size, color, category }),
     }).then(res => res.json())
